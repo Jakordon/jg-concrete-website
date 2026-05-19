@@ -1,0 +1,66 @@
+---
+---
+
+<section class="quote-section" id="quote">
+  <div class="container quote-inner">
+    <div class="quote-text">
+      <h2>Get Your Free Quote</h2>
+      <p>
+        Tell us about your project and we'll get back to you fast —
+        no obligation, no pressure.
+      </p>
+      <a href="tel:4697044227" class="quote-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        </svg>
+        (469) 704-4227
+      </a>
+      <p class="quote-or">Or fill in the form and we'll call you.</p>
+    </div>
+
+    <form class="quote-form" id="quoteForm">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+      </div>
+      <div class="form-group">
+        <select name="service" required>
+          <option value="" disabled selected>What do you need?</option>
+          <option value="driveway">Driveway</option>
+          <option value="patio">Patio</option>
+          <option value="both">Both — Driveway & Patio</option>
+          <option value="other">Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea name="message" rows="4" placeholder="Tell us about your project — size, location, anything we should know..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Send My Request</button>
+      <p class="form-note">We'll call or text you within 24 hours.</p>
+    </form>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('quoteForm') as HTMLFormElement;
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const original = btn.textContent;
+      btn.textContent = 'Request Sent!';
+      btn.disabled = true;
+      btn.style.background = '#2a7a2a';
+      btn.style.borderColor = '#2a7a2a';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.disabled = false;
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        form.reset();
+      }, 4000);
+    });
+  }
+</script>

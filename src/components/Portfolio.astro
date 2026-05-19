@@ -1,0 +1,22 @@
+---
+const photos = [
+  { src: '/images/Patio 1.jpeg', alt: 'Concrete patio pour — JG Concrete' },
+  { src: '/images/Patio 2.jpeg', alt: 'Backyard concrete patio — JG Concrete' },
+];
+---
+
+<section class="section gallery-section" id="portfolio">
+  <div class="container">
+    <div class="section-head">
+      <h2>Portfolio</h2>
+      <p>Real projects, real results — every slab poured by JG Concrete.</p>
+    </div>
+    <div class="gallery-grid">
+      {photos.map(p => (
+        <div class="gallery-item">
+          <img src={p.src} alt={p.alt} loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

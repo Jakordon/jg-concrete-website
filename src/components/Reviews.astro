@@ -1,0 +1,64 @@
+---
+const reviews = [
+  {
+    text: `JG Concrete did an <strong>outstanding job</strong> on our driveway. They showed up on time, worked clean, and the finished concrete looks <strong>absolutely incredible</strong>. Best money I've spent on the house.`,
+    name: 'Maria R.',
+    location: 'Frisco, TX',
+    initial: 'M',
+  },
+  {
+    text: `The new patio completely transformed our backyard. <strong>Exceptional quality</strong> and fair pricing. JG Concrete will be my first call for any concrete work going forward — <strong>couldn't be more satisfied.</strong>`,
+    name: 'David L.',
+    location: 'McKinney, TX',
+    initial: 'D',
+  },
+  {
+    text: `Super clean work and they finished ahead of schedule. The driveway looks <strong>better than we imagined</strong>. Neighbors keep asking who did it. <strong>Highly recommend!</strong>`,
+    name: 'Tanya K.',
+    location: 'Allen, TX',
+    initial: 'T',
+  },
+  {
+    text: `I got three quotes and JG was the most professional from the start. The patio came out <strong>perfect</strong> — smooth, level, and exactly what I asked for. <strong>Fantastic experience</strong> start to finish.`,
+    name: 'Robert H.',
+    location: 'Rockwall, TX',
+    initial: 'R',
+  },
+  {
+    text: `Had them pour a new driveway after my old one cracked apart. <strong>Night and day difference.</strong> The crew was friendly, fast, and left the site spotless. <strong>Will definitely use again.</strong>`,
+    name: 'Sandra M.',
+    location: 'Garland, TX',
+    initial: 'S',
+  },
+  {
+    text: `JG Concrete gave us an honest quote and delivered exactly what they promised. Our backyard patio is <strong>gorgeous</strong> — we're out there every weekend now. <strong>Great company, great work.</strong>`,
+    name: 'Jennifer W.',
+    location: 'Plano, TX',
+    initial: 'J',
+  },
+];
+---
+
+<section class="section reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <h2>What Our Customers Say</h2>
+      <p>Real reviews from real DFW homeowners.</p>
+    </div>
+    <div class="reviews-grid">
+      {reviews.map(r => (
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" set:html={r.text} />
+          <div class="reviewer">
+            <div class="reviewer-avatar">{r.initial}</div>
+            <div class="reviewer-info">
+              <strong>{r.name}</strong>
+              <span>{r.location}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
