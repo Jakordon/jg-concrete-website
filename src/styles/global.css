@@ -363,6 +363,31 @@ a { color: inherit; }
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
+.about-credential {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  background: var(--dark3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.cim-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.about-credential span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--silver-dark);
+  line-height: 1.3;
+}
+
 .about-text h2 {
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   font-weight: 800;
