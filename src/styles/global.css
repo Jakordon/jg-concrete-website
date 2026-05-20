@@ -70,13 +70,13 @@ a { color: inherit; }
 
 .btn-outline {
   background: transparent;
-  color: #fff;
-  border-color: rgba(255,255,255,0.65);
+  color: #111;
+  border-color: rgba(0,0,0,0.35);
 }
 .btn-outline:hover {
-  background: #fff;
-  color: var(--dark);
-  border-color: #fff;
+  background: #111;
+  color: #fff;
+  border-color: #111;
 }
 
 .btn-lg { padding: 15px 30px; font-size: 16px; }
@@ -161,19 +161,19 @@ a { color: inherit; }
 }
 
 .nav-link {
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   transition: color 0.2s;
 }
-.nav-link:hover { color: #fff; }
+.nav-link:hover { color: var(--silver); }
 
 .nav-phone {
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 14px;
 }
 .nav-phone:hover { color: var(--silver); }
 
@@ -208,26 +208,22 @@ a { color: inherit; }
 ============================ */
 .hero {
   position: relative;
-  min-height: 580px;
+  min-height: 520px;
   display: flex;
   align-items: center;
-  background:
-    url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1600&auto=format&fit=crop')
-    center / cover no-repeat;
+  background: #ffffff;
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.48) 100%);
+  display: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: #111;
   padding: 90px 24px;
-  max-width: 680px;
+  max-width: 720px;
 }
 
 .hero-tag {
@@ -235,7 +231,7 @@ a { color: inherit; }
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--silver);
+  color: var(--gray);
   margin-bottom: 14px;
 }
 
@@ -245,11 +241,12 @@ a { color: inherit; }
   line-height: 1.08;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
+  color: #111;
 }
 
 .hero-sub {
   font-size: 1.1rem;
-  opacity: 0.85;
+  color: #555;
   margin-bottom: 36px;
   line-height: 1.6;
 }
